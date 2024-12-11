@@ -44,7 +44,7 @@ const projectsData = [
   {
     id: 5,
     title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
+    description: "Authentication and CRUD operations", 
     image: "/images/projects/5.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -92,12 +92,12 @@ const ProjectsSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Web"
+          name="Web 3.0"
           isSelected={tag === "Web"}
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Mobile"
+          name="Web 2.0"
           isSelected={tag === "Mobile"}
         />
       </div>

@@ -5,16 +5,28 @@ import TabButton from "./TabButton";
 
 const TAB_DATA = [
   {
-    title: "Skills",
+    title: "Skills ",
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
-        <li>JavaScript</li>
-        <li>React</li>
+        <li>BLOCKCHAIN</li>
+        <li>HARDHAT & GANACHE </li>
+        <li>GRAPH QL</li>
+        <li>JAVASCRIPT</li> 
+        <li>REACT JS & NEXT JS</li>
+        <li>TAILWIND-CSS</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Languages",
+    id: "lang",
+    content: (
+      <ul className="list-disc pl-2">
+         <li>Solidity</li>
+         <li>Rust</li>
+         <li>Java</li>
+         <li>C</li>
       </ul>
     ),
   },
@@ -23,8 +35,9 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
+        <li>CODE EATER</li>
+        <li>CYFRIN UPDRAFT</li>
+        <li>ALCHEMY </li>
       </ul>
     ),
   },
@@ -33,8 +46,8 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
+        <li>CODE EATER</li>
+        <li>ALCHEMY</li>
       </ul>
     ),
   },
@@ -57,12 +70,10 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+          I am a skilled <span className="font-bold " > Web 3.0 developer </span> dedicated to creating <span className="font-bold"> decentralized applications </span>that address real-world challenges,
+          combining technical expertise with a passion for innovation. As an active member of my college  <span className="font-bold">NGO</span> , committed to making 
+          a positive impact. I love to spend my free time with <span className="font-bold">my pet </span> & <span className="font-bold">reading self-growth books</span>. Apart from this , practicing<span className="font-bold"> yoga </span> 
+          and staying sharp with games of <span className="font-bold"> chess and badminton.</span>
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
@@ -70,8 +81,17 @@ const AboutSection = () => {
               active={tab === "skills"}
             >
               {" "}
-              Skills{" "}
+              Skills & Tools{" "}
             </TabButton>
+
+            <TabButton
+              selectTab={() => handleTabChange("lang")}
+              active={tab === "lang"}
+            >
+              {" "}
+              Languages{" "}
+            </TabButton>
+
             <TabButton
               selectTab={() => handleTabChange("education")}
               active={tab === "education"}
@@ -79,13 +99,7 @@ const AboutSection = () => {
               {" "}
               Education{" "}
             </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
-            >
-              {" "}
-              Certifications{" "}
-            </TabButton>
+           
           </div>
           <div className="mt-8">
             {TAB_DATA.find((t) => t.id === tab).content}
